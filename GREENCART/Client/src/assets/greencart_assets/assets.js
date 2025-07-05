@@ -155,60 +155,69 @@ export {
 //   },
 // ];
 
-export const footerLinks = [
-  {
-    title: "Quick Links",
-    links: [
-      { text: "Home", url: "#" },
-      { text: "Best Sellers", url: "#" },
-      { text: "Offers & Deals", url: "#" },
-      { text: "Contact Us", url: "#" },
-      { text: "FAQs", url: "#" },
-    ],
-  },
-  {
-    title: "Need help?",
-    links: [
-      { text: "Delivery Information", url: "#" },
-      { text: "Return & Refund Policy", url: "#" },
-      { text: "Payment Methods", url: "#" },
-      { text: "Track your Order", url: "#" },
-      { text: "Contact Us", url: "#" },
-    ],
-  },
-  {
-    title: "Follow Us",
-    links: [
-      { text: "Instagram", url: "#" },
-      { text: "Twitter", url: "#" },
-      { text: "Facebook", url: "#" },
-      { text: "YouTube", url: "#" },
-    ],
-  },
-];
+// export const footerLinks = [
+//   {
+//     title: "Quick Links",
+//     links: [
+//       { text: "Home", url: "#" },
+//       { text: "Best Sellers", url: "#" },
+//       { text: "Offers & Deals", url: "#" },
+//       { text: "Contact Us", url: "#" },
+//       { text: "FAQs", url: "#" },
+//     ],
+//   },
+//   {
+//     title: "Need help?",
+//     links: [
+//       { text: "Delivery Information", url: "#" },
+//       { text: "Return & Refund Policy", url: "#" },
+//       { text: "Payment Methods", url: "#" },
+//       { text: "Track your Order", url: "#" },
+//       { text: "Contact Us", url: "#" },
+//     ],
+//   },
+//   {
+//     title: "Follow Us",
+//     links: [
+//       { text: "Instagram", url: "#" },
+//       { text: "Twitter", url: "#" },
+//       { text: "Facebook", url: "#" },
+//       { text: "YouTube", url: "#" },
+//     ],
+//   },
+// ];
 
-export const features = [
-  {
-    icon: delivery_truck_icon,
-    title: "Fastest Delivery",
-    description: "Groceries delivered in under 30 minutes.",
-  },
-  {
-    icon: leaf_icon,
-    title: "Freshness Guaranteed",
-    description: "Fresh produce straight from the source.",
-  },
-  {
-    icon: coin_icon,
-    title: "Affordable Prices",
-    description: "Quality groceries at unbeatable prices.",
-  },
-  {
-    icon: trust_icon,
-    title: "Trusted by Thousands",
-    description: "Loved by 10,000+ happy customers.",
-  },
-];
+export {
+  delivery_truck_icon,
+  leaf_icon,
+  coin_icon,
+  trust_icon,
+  bottom_banner_image,
+  bottom_banner_image_sm,
+}
+
+// export const features = [
+//   {
+//     icon: delivery_truck_icon,
+//     title: "Fastest Delivery",
+//     description: "Groceries delivered in under 30 minutes.",
+//   },
+//   {
+//     icon: leaf_icon,
+//     title: "Freshness Guaranteed",
+//     description: "Fresh produce straight from the source.",
+//   },
+//   {
+//     icon: coin_icon,
+//     title: "Affordable Prices",
+//     description: "Quality groceries at unbeatable prices.",
+//   },
+//   {
+//     icon: trust_icon,
+//     title: "Trusted by Thousands",
+//     description: "Loved by 10,000+ happy customers.",
+//   },
+// ];
 
 export const dummyProducts = [
   // Vegetables
