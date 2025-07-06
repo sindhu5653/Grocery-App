@@ -1,62 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import {
-  organic_vegitable_image,
-  fresh_fruits_image,
-  bottles_image,
-  maggi_image,
-  dairy_product_image,
-  bakery_image,
-  grain_image
-} from '../assets/greencart_assets/assets.js';
-
-const categories = [
-  {
-    text: "Organic veggies",
-    path: "Vegetables",
-    image: organic_vegitable_image,
-    bgColor: "#FEF6DA",
-  },
-  {
-    text: "Fresh Fruits",
-    path: "Fruits",
-    image: fresh_fruits_image,
-    bgColor: "#FEE0E0",
-  },
-  {
-    text: "Cold Drinks",
-    path: "Drinks",
-    image: bottles_image,
-    bgColor: "#F0F5DE",
-  },
-  {
-    text: "Instant Food",
-    path: "Instant",
-    image: maggi_image,
-    bgColor: "#E1F5EC",
-  },
-  {
-    text: "Dairy Products",
-    path: "Dairy",
-    image: dairy_product_image,
-    bgColor: "#FEE6CD",
-  },
-  {
-    text: "Bakery & Breads",
-    path: "Bakery",
-    image: bakery_image,
-    bgColor: "#E0F6FE",
-  },
-  {
-    text: "Grains & Cereals",
-    path: "Grains",
-    image: grain_image,
-    bgColor: "#F1E3F9",
-  },
-];
+import { categories } from '../assets/greencart_assets/assets'; 
+import { useAppContext } from '../context/AppContext';
 
 const Categories = () => {
-  const navigate = useNavigate();
+  const { navigate } = useAppContext(); 
 
   return (
     <div className="mt-16">
