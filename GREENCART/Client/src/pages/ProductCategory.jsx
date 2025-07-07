@@ -2,7 +2,7 @@ import React from 'react'
 import { useAppContext } from '../context/AppContext'
 import { useParams } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
-import { categories } from '../assets/greencart_assets/assets' // ✅ Import it here
+import { categories } from '../assets/greencart_assets/assets' 
 
 const ProductCategory = () => {
   const { products } = useAppContext()
