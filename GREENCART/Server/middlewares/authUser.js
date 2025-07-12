@@ -1,21 +1,23 @@
-const authUser = async (req, res,next)=>{
-    const {token} = req.cookies;
+import jwt from 'jsonwebtoken';
 
-    if(!token){
-        return res.json({success: false, message: 'Not Authorized'})
+const authUser = async (req, res, next) => {
+    const { token } = req.cookies;
+
+    if (!token) {
+        return res.json({ success: false, message: 'Not Authorized' })
     }
     try {
-        const tokenDecode = jwt.verify(token,process.env.JWT_SECRET)
-        if(tokenDecode.id){
-            req.body.userId = tokenDecode.id;
+        const tokenDecode = jwt.verify(token, process.env.JWT_SECRET)
+        if (tokenDecode.id) {
+            req.userId = tokenDecode.id;
         }
-        else{
-            return res.json({success: false, message: 'Not Authorized'});
+        else {
+            return res.json({ success: false, message: 'Not Authorized' });
         }
         next();
 
     } catch (error) {
-        res.json({success: false, message: error.message});   
+        res.json({ success: false, message: error.message });
     }
 }
 

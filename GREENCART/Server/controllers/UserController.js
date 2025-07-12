@@ -24,10 +24,10 @@ export const register = async (req, res) => {
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' })
 
         res.cookie('token', token, {
-            httpOnly: true, //Prevent Javascript to access cookie
-            secure: process.env.NODE_ENV === 'production', //Use secure cookies in production
-            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',  //CSRF protection
-            maxAge: 7 * 24 * 60 * 1000, //Cookie expiration time
+            httpOnly: true,   //Prevent Javascript to access cookie
+            secure: process.env.NODE_ENV === 'production',   //Use secure cookies in production
+            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',    //CSRF protection
+            maxAge: 7 * 24 * 60 * 1000,   //Cookie expiration time
         })
 
         return res.json({ success: true, user: { email: user.email, name: user.name } })
@@ -37,6 +37,7 @@ export const register = async (req, res) => {
         res.json({ success: false, message: error.message })
     }
 }
+
 
 //Login User : /api/user/login
 
@@ -74,12 +75,13 @@ export const login = async (req, res) => {
     }
 }
 
+
 //Check Auth : /api/user/is-auth
 
 export const isAuth = async (req, res) => {
     try {
-        const { userId } = req.body;
-        const user = await User.findById(userId).select("-password")
+        // const { userId } = req.body;
+        const user = await User.findById(req.userId).select("-password")
         return res.json({ success: true, user })
 
     } catch (error) {
@@ -87,6 +89,7 @@ export const isAuth = async (req, res) => {
         res.json({ success: false, message: error.message })
     }
 }
+
 
 //Login User : /api/user/logout
 
